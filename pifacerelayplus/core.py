@@ -205,12 +205,10 @@ class PiFaceRelayPlus(pifacecommon.mcp23s17.MCP23S17,
 
         elif plus_board == MOTOR_DC:
             self.motors = [
-                MotorDC(
-                    pin1=pcmcp.MCP23S17RegisterBitNeg(3, pcmcp.GPIOB, self),
-                    pin2=pcmcp.MCP23S17RegisterBitNeg(2, pcmcp.GPIOB, self)),
-                MotorDC(
-                    pin1=pcmcp.MCP23S17RegisterBitNeg(1, pcmcp.GPIOB, self),
-                    pin2=pcmcp.MCP23S17RegisterBitNeg(0, pcmcp.GPIOB, self)),
+                MotorDC(pin1=pcmcp.MCP23S17RegisterBitNeg(1, pcmcp.GPIOB, self),
+                        pin2=pcmcp.MCP23S17RegisterBitNeg(0, pcmcp.GPIOB, self)),
+                MotorDC(pin1=pcmcp.MCP23S17RegisterBitNeg(3, pcmcp.GPIOB, self),
+                        pin2=pcmcp.MCP23S17RegisterBitNeg(2, pcmcp.GPIOB, self)),
                 MotorDC(pin1=pcmcp.MCP23S17RegisterBit(4, pcmcp.GPIOA, self),
                         pin2=pcmcp.MCP23S17RegisterBit(5, pcmcp.GPIOA, self)),
                 MotorDC(pin1=pcmcp.MCP23S17RegisterBit(6, pcmcp.GPIOA, self),
